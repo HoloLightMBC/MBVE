@@ -29,7 +29,6 @@ timer.Create("MBS_Loader", 1, 0, function()
 
                 Iteration = Iteration + 1
                 if Iteration > 1000 then break end      --if the while becomes dumb
-                --print("Iteration: "..Iteration)
 
                 --Check for Distance
                 while Iteration2 < #Distance do
@@ -39,20 +38,18 @@ timer.Create("MBS_Loader", 1, 0, function()
                     --print("Iteration2: "..Iteration2)
 
                     -- Look for sounds in the designated path
-                    local TxtToFind = "sound/mbs/acf_other/"..Path.."/"..Category[Iteration].."/"..Distance[Iteration2].."/*.mp3"   --print( "\n"..TxtToFind.."\n" )
+                    local TxtToFind = "sound/mbse/acf_other/"..Path.."/"..Category[Iteration].."/"..Distance[Iteration2].."/*.wav"   --print( "\n"..TxtToFind.."\n" )
                     local ExSounds = file.Find( TxtToFind, "GAME" )
 
-                    --if table.IsEmpty(ExSounds) then print("No se encontro nada!") end
-
-                    ACE.Sounds[Data["Type"]][Category[Iteration]] = ACE.Sounds[Data["Type"]][Category[Iteration]] or {}         
+                    ACE.Sounds[Data["Type"]][Category[Iteration]] = ACE.Sounds[Data["Type"]][Category[Iteration]] or {}
 
                     ACE.Sounds[Data["Type"]][Category[Iteration]][Distance[Iteration2]] = ACE.Sounds[Data["Type"]][Category[Iteration]][Distance[Iteration2]] or {}
 
 
                     for i,Sound in pairs(ExSounds) do
 
-                        local Str = "mbs/acf_other/"..Path.."/"..Category[Iteration].."/"..Distance[Iteration2].."/"..Sound     --print('Loading sound: '..Str)
-                
+                        local Str = "mbse/acf_other/"..Path.."/"..Category[Iteration].."/"..Distance[Iteration2].."/"..Sound     --print('Loading sound: '..Str)
+
                         table.insert(ACE.Sounds[Data["Type"]][Category[Iteration]][Distance[Iteration2]], Str )
 
                     end
@@ -60,19 +57,7 @@ timer.Create("MBS_Loader", 1, 0, function()
             end
         end
 
-        --[[
-        --Debug tool to see if tables are being populated. Change values in tableToTest to see if there are sounds inside.
-        timer.Simple(2, function()
-
-            local tableToTest = ACE.Sounds["Penetrations"]["large"]["close"]
-            local MaxCount = #tableToTest --print("Table total entries: "..#tableToTest)
-
-            --print("Test if we have something in this sample table")
-            --print(tableToTest[math.random(1, MaxCount)] )
-
-        end)
-
-        ]]--
         timer.Remove("MBS_Loader")
+        print("MBSE Loaded!")
     end
 end)
