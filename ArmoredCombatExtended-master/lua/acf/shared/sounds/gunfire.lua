@@ -601,10 +601,10 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/howitzer_multi.mp3",
 			Volume 	= 100,
 			Pitch 	= 100,
 			Package = {
-				"acf_other/gunfire/cannon/cannon_mid_far1.wav",
-				"acf_other/gunfire/cannon/cannon_mid_far2.wav",
-				"acf_other/gunfire/cannon/cannon_mid_far3.wav",
-				"acf_other/gunfire/cannon/cannon_mid_far4.wav"			
+				"ace_weapons/multi_sound/content/howitzer/far/far1.mp3",
+				"ace_weapons/multi_sound/content/howitzer/far/far2.mp3",
+				"ace_weapons/multi_sound/content/howitzer/far/far3.mp3",
+				"ace_weapons/multi_sound/content/howitzer/far/far4.mp3"			
 			}
 
 		},
