@@ -598,7 +598,7 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/howitzer_multi.mp3",
 
 		},
 		mid = {
-			Volume 	= 100,
+			Volume 	= 1,
 			Pitch 	= 100,
 			Package = {
 				"ace_weapons/multi_sound/content/howitzer/far/far1.mp3",
@@ -609,7 +609,7 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/howitzer_multi.mp3",
 
 		},
 		far = {
-			Volume 	= 100,
+			Volume 	= 1,
 			Pitch 	= 100,
 			Package = {
 				"ace_weapons/multi_sound/content/howitzer/far/far1.mp3",
@@ -627,7 +627,7 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/mortar_multi.mp3",
 	{
 		main = {
 			Volume 	= 1,
-			Pitch 	= 200,
+			Pitch 	= 100,
 			Package = {
 				"ace_weapons/multi_sound/content/mortar/close/close1.mp3",
 				"ace_weapons/multi_sound/content/mortar/close/close2.mp3",
@@ -638,7 +638,7 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/mortar_multi.mp3",
 		},
 		mid = {
 			Volume 	= 1,
-			Pitch 	= 200,
+			Pitch 	= 100,
 			Package = {
 				"ace_weapons/multi_sound/content/mortar/far/far1.mp3"	
 			}
@@ -646,7 +646,7 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/mortar_multi.mp3",
 		},
 		far = {
 			Volume 	= 1,
-			Pitch 	= 200,
+			Pitch 	= 100,
 			Package = {
 				"ace_weapons/multi_sound/content/mortar/far/far1.mp3",
 				"ace_weapons/multi_sound/content/mortar/far/far2.mp3",
@@ -659,23 +659,28 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/mortar_multi.mp3",
  )
 
 --Generic AT Rifle gunfire
-ACE_DefineGunFireSound( "acf_extra/tankfx/gnomefather/7mm1.wav", 
+ACE_DefineGunFireSound( "ace_weapons/multi_sound/atr.mp3", 
 	{
 		main = {
 			Volume 	= 1,
 			Pitch 	= 100,
 			Package = {
-				"acf_extra/tankfx/gnomefather/7mm1.wav"			
+				"ace_weapons/multi_sound/content/close/atr.mp3",
+				"ace_weapons/multi_sound/content/close/close1.mp3",
+				"ace_weapons/multi_sound/content/close/close2.mp3",
+				"ace_weapons/multi_sound/content/close/close3.mp3",
+				"ace_weapons/multi_sound/content/close/close4.mp3"		
 			}
 		},
 		mid = {
 			Volume 	= 100,
 			Pitch 	= 100,
 			Package = {
-				"acf_other/gunfire/autocannon/autocannon_mid_far1.wav",
-				"acf_other/gunfire/autocannon/autocannon_mid_far2.wav",
-				"acf_other/gunfire/autocannon/autocannon_mid_far3.wav",
-				"acf_other/gunfire/autocannon/autocannon_mid_far4.wav"		
+				"ace_weapons/multi_sound/content/mid/mid1.mp3",
+				"ace_weapons/multi_sound/content/mid/mid2.mp3",
+				"ace_weapons/multi_sound/content/mid/mid3.mp3",
+				"ace_weapons/multi_sound/content/mid/mid4.mp3",
+				"ace_weapons/multi_sound/content/mid/mid5.mp3"		
 			}
 
 		},
@@ -683,33 +688,41 @@ ACE_DefineGunFireSound( "acf_extra/tankfx/gnomefather/7mm1.wav",
 			Volume 	= 100,
 			Pitch 	= 100,
 			Package = {
-				"acf_other/gunfire/autocannon/autocannon_mid_far1.wav",
-				"acf_other/gunfire/autocannon/autocannon_mid_far2.wav",
-				"acf_other/gunfire/autocannon/autocannon_mid_far3.wav",
-				"acf_other/gunfire/autocannon/autocannon_mid_far4.wav"			
+				"ace_weapons/multi_sound/content/mid/mid1.mp3",
+				"ace_weapons/multi_sound/content/mid/mid2.mp3",
+				"ace_weapons/multi_sound/content/mid/mid3.mp3",
+				"ace_weapons/multi_sound/content/mid/mid4.mp3",
+				"ace_weapons/multi_sound/content/mid/mid5.mp3"				
 			}
 		}
 	}
  )
 
 --generic rotary autocannon gunfire
-ACE_DefineGunFireSound( "weapons/acf_gun/mg_fire2.wav", 
+ACE_DefineGunFireSound( "ace_weapons/multi_sound/rotary_machinegun_multi.mp3", 
 	{
 		main = {
-			Volume 	= 0.9,
-			Pitch 	= 90,
+			Volume 	= 1.0,
+			Pitch 	= 100,
 			Package = {
-				"weapons/acf_gun/mg_fire2.wav"			
+				"ace_weapons/multi_sound/content/rotaryautocannon/close/rotary_machinegun_multi.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/close/close2.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/close/close3.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/close/close4.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/close/close5.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/close/close6.mp3"			
 			}
 		},
 		mid = {
 			Volume 	= 2,
 			Pitch 	= 100,
 			Package = {
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far1.wav",
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far2.wav",
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far3.wav",
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far4.wav"		
+				"ace_weapons/multi_sound/content/rotaryautocannon/mid/mid1.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/mid/mid2.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/mid/mid3.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/mid/mid4.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/mid/mid5.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/mid/mid6.mp3"	
 			}
 
 		},
@@ -717,10 +730,12 @@ ACE_DefineGunFireSound( "weapons/acf_gun/mg_fire2.wav",
 			Volume 	= 2,
 			Pitch 	= 100,
 			Package = {
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far1.wav",
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far2.wav",
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far3.wav",
-				"acf_other/gunfire/rotaryautocannon/rac_mid_far4.wav"			
+				"ace_weapons/multi_sound/content/rotaryautocannon/far/far1.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/far/far2.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/far/far3.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/far/far4.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/far/far5.mp3",
+				"ace_weapons/multi_sound/content/rotaryautocannon/far/far6.mp3"			
 			}
 		}
 	}
