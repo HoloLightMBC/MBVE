@@ -5,25 +5,24 @@
 --[[--------------------------------------------------------- 
     Initializes the effect. The data is a table of data  
     which was passed from the server. 
-	Edited by BVSE Community
 ]]-----------------------------------------------------------
- function EFFECT:Init( data ) 
+function EFFECT:Init( data ) 
 
 	local Gun = data:GetEntity()
 	if not IsValid(Gun) then return end
-
-	local Propellant = data:GetScale()
-	local ReloadTime = data:GetMagnitude()
 	
-	local Sound = Gun:GetNWString( "Sound", "" )
-	local Class = Gun:GetNWString( "Class", "C" )
-	local Caliber = Gun:GetNWInt( "Caliber", 1 ) * 10 print('Caliber: '..Caliber)
+	local Propellant 	= data:GetScale()
+	local ReloadTime 	= data:GetMagnitude()
+	
+	local Sound 		= Gun:GetNWString( "Sound", "" )
+	local Class 		= Gun:GetNWString( "Class", "C" )
+	local Caliber 		= Gun:GetNWInt( "Caliber", 1 ) * 10 --print('Caliber: '..Caliber)
 
 	--This tends to fail
-	local ClassData = list.Get("ACFClasses").GunClass[Class] or {}
+	local ClassData 	= list.Get("ACFClasses").GunClass[Class] or {}
 	
-	local Attachment = "muzzle"
-	local longbarrel = (ClassData and ClassData.longbarrel) or nil
+	local Attachment 	= "muzzle"
+	local longbarrel 	= (ClassData and ClassData.longbarrel) or nil
 	
 	if longbarrel ~= nil then
 		if Gun:GetBodygroup( longbarrel.index ) == longbarrel.submodel then
@@ -35,20 +34,20 @@
 	if( CLIENT and not IsValidSound( Sound ) ) then
 		Sound = ClassData["sound"]
 	end
-	PrintTable( ClassData )
-	if Gun:IsValid() then
+		
+	if IsValid(Gun) then
 
 		if Propellant > 0 then
 
 			if not nosound then
-				ACE_SGunFire( Gun:GetPos(), Sound ,Class, Caliber , Propellant )
+				ACE_SGunFire( Gun, Sound ,Class, Caliber , Propellant )
 			end
-
-			local Muzzle = Gun:GetAttachment( Gun:LookupAttachment(Attachment)) or { Ang = Gun:GetAngles() }
-			local Position = Muzzle.Pos
+			
+			local Muzzle = Gun:GetAttachment( Gun:LookupAttachment(Attachment)) or { Pos = Gun:GetPos(), Ang = Gun:GetAngles() }
 			local Flash = ClassData["muzzleflash"] or '120mm_muzzleflash_noscale'
-            local Angle = Gun:LocalToWorldAngles(Angle(0,0,0) )
-			ParticleEffect( Flash , Position, Muzzle.Ang , Gun )
+
+			ParticleEffect( Flash , Muzzle.Pos, Muzzle.Ang, Gun )
+
 			Gun:Animate( Class, ReloadTime, false )
 		else
 			Gun:Animate( Class, ReloadTime, true )
@@ -56,6 +55,7 @@
 	end
 	
  end 
+   
    
 /*---------------------------------------------------------
    THINK

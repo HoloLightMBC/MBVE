@@ -590,9 +590,9 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/howitzer_multi.mp3",
 			Volume 	= 1,
 			Pitch 	= 100,
 			Package = {
-				"ace_weapons/multi_sound/content/howitzer/close/close1.mp3"
-				"ace_weapons/multi_sound/content/howitzer/close/close2.mp3"
-				"ace_weapons/multi_sound/content/howitzer/close/close3.mp3"
+				"ace_weapons/multi_sound/content/howitzer/close/close1.mp3",
+				"ace_weapons/multi_sound/content/howitzer/close/close2.mp3",
+				"ace_weapons/multi_sound/content/howitzer/close/close3.mp3",
 				"ace_weapons/multi_sound/content/howitzer/close/close4.mp3"			
 			}
 
@@ -627,18 +627,18 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/mortar_multi.mp3",
 	{
 		main = {
 			Volume 	= 1,
-			Pitch 	= 100,
+			Pitch 	= 200,
 			Package = {
-				"ace_weapons/multi_sound/content/mortar/close/close1.mp3"
-				"ace_weapons/multi_sound/content/mortar/close/close2.mp3"
-				"ace_weapons/multi_sound/content/mortar/close/close3.mp3"
-				"ace_weapons/multi_sound/content/mortar/close/close4.mp3"
+				"ace_weapons/multi_sound/content/mortar/close/close1.mp3",
+				"ace_weapons/multi_sound/content/mortar/close/close2.mp3",
+				"ace_weapons/multi_sound/content/mortar/close/close3.mp3",
+				"ace_weapons/multi_sound/content/mortar/close/close4.mp3",
 				"ace_weapons/multi_sound/content/mortar/close/close5.mp3"			
 			}
 		},
 		mid = {
 			Volume 	= 1,
-			Pitch 	= 100,
+			Pitch 	= 200,
 			Package = {
 				"ace_weapons/multi_sound/content/mortar/far/far1.mp3"	
 			}
@@ -646,12 +646,12 @@ ACE_DefineGunFireSound( "ace_weapons/multi_sound/mortar_multi.mp3",
 		},
 		far = {
 			Volume 	= 1,
-			Pitch 	= 100,
+			Pitch 	= 200,
 			Package = {
-				"ace_weapons/multi_sound/content/mortar/far/far1.mp3"
-				"ace_weapons/multi_sound/content/mortar/far/far2.mp3"
-				"ace_weapons/multi_sound/content/mortar/far/far3.mp3"
-				"ace_weapons/multi_sound/content/mortar/far/far4.mp3"
+				"ace_weapons/multi_sound/content/mortar/far/far1.mp3",
+				"ace_weapons/multi_sound/content/mortar/far/far2.mp3",
+				"ace_weapons/multi_sound/content/mortar/far/far3.mp3",
+				"ace_weapons/multi_sound/content/mortar/far/far4.mp3",
 				"ace_weapons/multi_sound/content/mortar/far/far5.mp3"		
 			}
 		}
